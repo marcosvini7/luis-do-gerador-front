@@ -47,7 +47,7 @@
                 <div class="card-body">
                     <div class="d-block d-md-flex justify-content-center align-items-center">
                         <div class="col col-md-4">
-                            <img :src="urlImagem" class="img-fluid">
+                            <img :src="urlStorage + dados.urlImagem" class="img-fluid">
                         </div>
                         <div class="col">
                             <ul class="list-group">
