@@ -11,7 +11,7 @@
       <div style="margin-left: 5px; margin-right: 5px"></div>
       <div class="col">
           <h4 class="text-center">{{dados.nome}}</h4>
-          <p style="white-space: pre"> {{ dados.descricao }} </p>
+          <p id="descricao"> {{ dados.descricao }} </p>
           <h4 style="font-style: italic"> Valor: R$ {{ dados.valor }},00</h4>
           <div class="d-flex justify-content-center mt-3 mb-3">         
             <button class="btn btn-info"  @click="favoritar">
@@ -48,6 +48,10 @@ export default {
 </script>
 
 <style scoped>
+    #descricao {
+        white-space: pre-wrap;        
+        word-wrap: break-word;       
+    }
     #estrela {
         color: rgb(238, 230, 122);
         font-size: 1.3em;

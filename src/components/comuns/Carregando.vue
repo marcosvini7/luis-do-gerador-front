@@ -30,7 +30,7 @@ export default {
                 this.temDados = false
             }
 
-            let rotasSemCarregamento = ['produtos.novo']
+            let rotasSemCarregamento = ['produtos.novo', 'servicos.novo']
             if(rotasSemCarregamento.includes(this.$route.name)) this.temDados = true
         })
 

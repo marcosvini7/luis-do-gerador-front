@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory, createWebHashHistory } from 'vue-router'
 import Principal from '@/components/layouts/Principal'
 import Contato from '@/components/views/principal/Contato'
 import Produtos from '@/components/views/comuns/Produtos'
@@ -12,7 +12,7 @@ import FormInformacoes from '@/components/views/adm/FormInformacoes'
 import FormServico from '@/components/views/adm/FormServico'
 
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHashHistory(),
     routes: [
         { 
             path: '/', 
