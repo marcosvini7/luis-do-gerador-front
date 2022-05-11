@@ -9,7 +9,7 @@
     </button>      
     <carregando :condicao="dados.length == 0" msg="Ops...nenhum serviço foi encontrado!">
       <div  v-for="servico in dados" :key="servico.id" class="d-flex align-items-center mt-3">
-        <img :src="urlStorage + servico.urlImagem" class="img-fluid col-3 col-md-2">
+        <img :src="urlStorage + servico.urlImagem" style="width: 70px">
         <div style="margin-left: 5px; margin-right: 5px"></div>
         <div>
           <h5> {{ servico.servico }} </h5>

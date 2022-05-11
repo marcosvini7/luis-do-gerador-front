@@ -19,6 +19,10 @@
         <div class="form-group">
             <label for="arquivo" class="form-label">Imagem</label>
             <input type="file" accept="image/*" class="form-control" id="arquivo">
+            <small class="form-text text-muted">
+                Recomenda-se utilizar imagens com tamanho padrão encontradas no seguinte site: 
+                <a href="https://www.flaticon.com/br/">Flaticon</a>
+            </small>
         </div>
         <button class="btn btn-primary mt-2">Salvar</button>
     </form>
