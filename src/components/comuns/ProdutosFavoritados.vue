@@ -3,7 +3,7 @@
 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
     <div class="offcanvas-header">
         <h5 id="offcanvasRightLabel">Produtos favoritos</h5>
-        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <button id="botao-fechar" type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
         <ul class="list-group">
@@ -30,11 +30,14 @@ export default {
             return process.env.VUE_APP_URL_STORAGE + produto.urlImagem
         },
         navegarPara(produto){
+            let botao = document.getElementById('botao-fechar')
+            botao.dispatchEvent(new Event('click'))
+
             if(this.$route.name.includes('adm')){ 
                 this.$router.push({name: 'adm.produto', params: {id: produto.id}})
             } else {
                 this.$router.push({name: 'produto', params: {id: produto.id}})
-            }
+            }            
         }
     },
     created(){

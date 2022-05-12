@@ -17,7 +17,7 @@ export default {
                     } else {
                         this.dados = res
                     } 
-                }             
+                }              
                 this.$emitter.emit('ocultarCarregamento', res)                                        
             })   
             .catch(() => {

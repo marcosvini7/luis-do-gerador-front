@@ -18,18 +18,18 @@ export default {
     props: ['condicao', 'msg'],
     data: () => ({
         terminouCarregar: false,
-        nenhumDado: false,
         temDados: true
     }),
     created(){
-        this.$emitter.on('ocultarCarregamento', res => {
+
+        this.$emitter.on('ocultarCarregamento', res => {    
             if(res != '' && res != null && res != undefined && res != 'erro') {
                 this.terminouCarregar = true   
                 this.temDados = true            
             } else {
                 this.temDados = false
-            }
-
+            }     
+            
             let rotasSemCarregamento = ['produtos.novo', 'servicos.novo']
             if(rotasSemCarregamento.includes(this.$route.name)) this.temDados = true
         })
