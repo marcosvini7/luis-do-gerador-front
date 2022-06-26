@@ -11,7 +11,7 @@
     </button>
     <carregando :condicao="dados.length == 0" msg="Ops...nenhum produto foi encontrado!">
       <div class="row">
-          <div v-for="(produto) in dados" :key="produto.id" class="col-6 col-md-4 col-lg-3"> 
+          <div v-for="(produto) in dados" :key="produto.id" class="col-6 col-md-4 col-lg-2"> 
             <produto :produto="produto" />      
           </div>   
       </div>

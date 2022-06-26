@@ -114,9 +114,10 @@ export default {
     },
     mounted(){
         let links = document.getElementsByClassName('nav-link')
+        let toggler = document.getElementById('toggler')
         for(let i = 0; i < links.length; i++){
             links[i].addEventListener('click', () => {
-                document.getElementById('toggler').dispatchEvent(new Event('click'))
+                toggler.dispatchEvent(new Event('click'))
             })
         }         
     }
